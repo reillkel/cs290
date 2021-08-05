@@ -1,0 +1,77 @@
+### Add user 1
+http://localhost:3000/create?name=Ava Walker&age=27&email=ava.walker@example.com&phoneNumber=6505848540
+
+### Add user 2
+http://localhost:3000/create?name=Arnold Owens&age=24&email=arnold.owens@example.com&phoneNumber=7074540929
+
+### Add user 3 - no phone number
+http://localhost:3000/create?name=Javier Sanders&age=61&email=javier.sanders@example.com
+
+### Add user 4
+http://localhost:3000/create?name=Bobby Hamilton&age=27&email=bobby.hamilton@example.com&phoneNumber=16817174606
+
+### Add user 5
+http://localhost:3000/create?name=Brett Jimenez&age=65&email=brett.jimenez@example.com&phoneNumber=3703831407
+
+### Add user 6
+http://localhost:3000/create?name=Cher Gray&age=27&email=cher@example.com&phoneNumber=8114482
+
+### Retrieve all users. Must return 6 users. Run 5 times
+http://localhost:3000/retrieve
+
+### Retrieve by _id.
+### TODO: Update _id to Cher Gray's id
+http://localhost:3000/retrieve?_id=610a367013960ffc6b2ee9d3
+
+### Retrieve by name. Must return 1 user
+http://localhost:3000/retrieve?name=Bobby Hamilton
+
+### Retrieve by email. Must return 1 user
+http://localhost:3000/retrieve?email=cher@example.com
+
+### Retrieve by age. Must return 3 users
+http://localhost:3000/retrieve?age=27
+
+### Retrieve by phone. Must return 1 user, Cher Gray
+### This is the 10th request for retrieve.
+### Stats must be printed. 5 with 0 params, 5 with 1 param
+http://localhost:3000/retrieve?phoneNumber=8114482
+
+### Update Cher Gray. updateCount must be 1
+### TODO: Update _id to Cher Gray's id. 
+http://localhost:3000/update?_id=610a367013960ffc6b2ee9d3&age=28&phoneNumber=12193456
+
+### Update using non-existent id. 
+### { "Error" : "Not found"}
+http://localhost:3000/update?_id=61015ac80991b44b4c49eeaf&age=28&phoneNumber=12193456            
+
+### Retrieve by phone. Must return 1 user, Cher Gray
+http://localhost:3000/retrieve?phoneNumber=12193456
+
+### Retrieve by age. Must return 2 users
+http://localhost:3000/retrieve?age=27
+
+### Retrieve by age. Must return 0 users
+http://localhost:3000/retrieve?age=21
+
+### Delete by _id. deleteCount must be 1. 
+### TODO: Update _id to Cher Gray's id
+http://localhost:3000/delete?_id=610a367013960ffc6b2ee9d3        
+
+### Delete by name. deleteCount must be 1
+http://localhost:3000/delete?name=Javier Sanders
+
+### Delete by age. deleteCount must be 2
+http://localhost:3000/delete?age=27
+
+### Retrieve by age. Must return 0 users
+http://localhost:3000/retrieve?age=27
+
+### Delete by email. deleteCount must be 1
+http://localhost:3000/delete?email=arnold.owens@example.com 
+
+### Delete by phoneNumber. deleteCount must be 1
+http://localhost:3000/delete?phoneNumber=3703831407
+
+### Retrieve all users. Must return 0 users
+http://localhost:3000/retrieve
